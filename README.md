@@ -1,4 +1,4 @@
 # golang-practice
 practicing golang 
 
-This repo of trying to understand Golang syntax and becoming more skilled at it.
+This repo is random problems I did to understand Golang syntax and to become more skilled at the different libraries Golang adds right out of the box.
