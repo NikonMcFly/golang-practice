@@ -9,8 +9,13 @@ import (
 	"io"
 	"strings"
 )
+/*
+	TCP 
+	net.Listen = The listen function creates servers
+	net.Dail = The Dial function connects to a server		
+*/
 
-
+var steve string = "steve"
 
 type Command struct {
 	Fields []string
@@ -56,6 +61,7 @@ func handle(commands chan Command, conn net.Conn) {
 
 func redisServer(commands chan Command) {
 	var data = make(map[string]string)
+	
 	for cmd := range commands {
 		if len(cmd.Fields) < 2 {
 			cmd.Result <- "Expected at least 2 arguments"
